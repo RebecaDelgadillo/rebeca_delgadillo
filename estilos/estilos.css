@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+@import url('../fuentes/stylesheet.css');
+:root{
+    /*colores*/
+    --night-: #121212;
+    --penn-blue: #0A215C;
+    --dark-green: #14342B;
+    --saboy-blue: #5868A6;
+    --columbia-blue: #AEC8DC;
+    --ghost-wine: #F0F3FF;
+
+    /*Espaciadores*/
+    --padding-1-:14px;
+    --padding-2-: 24px;
+
+    /*Variables*/
+    --h1: 47.78px;
+    --h2: 39.81px;
+    --h3: 33.18px;
+    --h4: 27.65px;
+    --h5: 23.04px;
+    --h6: 19.20px;
+    --p: 16.00px;
+    --s: 13.33px;
+    --xsm: 11.11px;
+
+    /*fuentes*/
+    --Doto: "Doto", sans-serif;
+    --grotesque: 'terminal_grotesque', sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    background-color: var(--ghost-wine);
+    font-family: "Doto", sans-serif;
+
+}
