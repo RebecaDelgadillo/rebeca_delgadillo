@@ -28,15 +28,117 @@
     --Doto: "Doto", sans-serif;
     --grotesque: 'terminal_grotesque', sans-serif;
 }
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-*{
-    margin:0;
-    padding:0;
+body {
+  background: var(--night-);
+  font-family: var(--Doto);
+  color: var(--ghost-wine);
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crt::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 1px,
+    transparent 2px,
+    transparent 8px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+header {
+  width: 100%;
+  background: linear-gradient(90deg, var(--penn-blue), var(--night-));
+  padding: 40px;
+  text-align: center;
+  color: var(--ghost-wine);
+  font-size: var(--h4);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.hero img {
+  border-radius: 20px;
+  align-items: center;
+  width: 80%;
+  border: 2px solid var(--columbia-blue);
+  box-shadow: 0 0 30px var(--night-);
+  filter: blur(2.5px)
+}
+.hero h1{
+    position: absolute;
+    left: 550px;
+    bottom: 520px;
+    width: 900px;
+    font-weight: bold;
+    padding: var(--padding-1-);
+    font-size: 70px;
+    z-index: 9999;
+    text-shadow: 0 0px 15px var(--ghost-wine); 
 }
 
 
-body{
-    background-color: var(--ghost-wine);
-    font-family: "Doto", sans-serif;
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
 
+/* ===== Columnas ===== */
+.left-column,
+.right-container {
+  background: #121212;
+  padding: 15px;
+  border: 2px solid #5868A6;
+  border-radius: 8px;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== Boxes ===== */
+.box {
+  background: #0a215c;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #AEC8DC;
+}
+
+.box2 {
+  background: #14342b;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #F0F3FF;
+}
+
+a {
+  color: #AEC8DC;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F0F3FF;
 }
