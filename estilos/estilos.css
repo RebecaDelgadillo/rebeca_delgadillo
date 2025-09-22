@@ -4,12 +4,12 @@
     /*colores*/
     --night-: #121212;
     --penn-blue: #0A215C;
-    --dark-green: #14342B;
     --saboy-blue: #5868A6;
     --columbia-blue: #AEC8DC;
     --ghost-wine: #F0F3FF;
 
     /*Espaciadores*/
+    --pading-0-:13px;
     --padding-1-:14px;
     --padding-2-: 24px;
 
@@ -27,9 +27,13 @@
     /*fuentes*/
     --Doto: "Doto", sans-serif;
     --grotesque: 'terminal_grotesque', sans-serif;
+
+    /* Separaciones de lina*/
+    --interlineado-1-:1.5;
 }
 /* ===== Reset básico ===== */
 * {
+  list-style: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,10 +43,11 @@ body {
   background: var(--night-);
   font-family: var(--Doto);
   color: var(--ghost-wine);
-  line-height: 1.4;
+  line-height: var(--interlineado-1-);
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: url(https://ani.cursors-4u.net/toons/too-12/too1131.cur), auto;
 }
 
 .crt::before {
@@ -62,11 +67,14 @@ body {
 header {
   width: 100%;
   background: linear-gradient(90deg, var(--penn-blue), var(--night-));
-  padding: 40px;
+  background-image: url(/imagenes/Texturaheader.png) ;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: var(--padding-2-);
   text-align: center;
   color: var(--ghost-wine);
   font-size: var(--h4);
-  font-weight: bold;
   margin-bottom: 20px;
 }
 .hero img {
@@ -78,32 +86,51 @@ header {
   filter: blur(2.5px)
 }
 .hero h1{
-    position: absolute;
-    left: 550px;
-    bottom: 520px;
-    width: 900px;
-    font-weight: bold;
-    padding: var(--padding-1-);
-    font-size: 70px;
-    z-index: 9999;
-    text-shadow: 0 0px 15px var(--ghost-wine); 
+  position: absolute;
+  left: 550px;
+  bottom: 520px;
+  width: 900px;
+  font-weight: bold;
+  padding: var(--padding-1-);
+  font-size: 70px;
+  z-index: 9999;
+  text-shadow: 0 0px 15px var(--ghost-wine); 
 }
-
 
 .container {
   display: grid;
   grid-template-columns: 200px 1fr 200px;
-  gap: 20px;
+  gap: var(--padding-2-);
   width: 90%;
   max-width: 1200px;
 }
+.left-column ul li {
+  padding: var(--padding-0-);
+  gap: var(--padding-1-);
+  border-radius: 4px;
+  margin-bottom: var(--padding-1-);
+  font-size: var(--h6);
+  font-weight: 700;
+  text-align: center;
+  
 
-/* ===== Columnas ===== */
-.left-column,
-.right-container {
-  background: #121212;
-  padding: 15px;
-  border: 2px solid #5868A6;
+}
+
+ul li.subseccion {
+  border: 2px ridge var(--columbia-blue);
+  background-color: #10385724;             
+  font-size: var(--p);  
+  padding: var(--pading-0-); 
+  font-weight: 400;
+  text-align: center;
+  box-shadow: inset 13px 0px 6px -10px  var(--night-), inset -13px 0px 6px -10px var(--night-), inset 0px 13px 6px -10px var(--saboy-blue), inset 0px -13px 6px -10px var(--night-);
+
+} 
+
+.left-column,.right-container {
+  background: var(--night-);
+  padding: var(--padding-1-);
+  border: 2px ridge var(--saboy-blue);
   border-radius: 8px;
 }
 
@@ -115,18 +142,25 @@ header {
 
 /* ===== Boxes ===== */
 .box {
-  background: #0a215c;
+  background: #010c26;
   padding: 15px;
   border-radius: 8px;
   border: 2px solid #AEC8DC;
+  background-image: url("/imagenes/background.png");
 }
 
 .box2 {
-  background: #14342b;
   padding: 10px;
   border-radius: 6px;
   margin-bottom: 10px;
 }
+.box2 p img {
+  transition: transform 0.2s ease;
+}
+.box2 p img:hover{
+  transform: scale(1.2);
+}
+
 
 h2 {
   margin-bottom: 10px;
@@ -142,3 +176,10 @@ a {
 a:hover {
   color: #F0F3FF;
 }
+.etiquetas img {
+  transition: transform 0.2s ease; 
+}
+.etiquetas img:hover {
+  transform: scale(1.1);
+}
+
