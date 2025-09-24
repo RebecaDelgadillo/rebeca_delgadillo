@@ -12,7 +12,7 @@
     --pading-0-:13px;
     --padding-1-:14px;
     --padding-2-: 24px;
-
+    --gap-1-:13px;
     /*Variables*/
     --h1: 47.78px;
     --h2: 39.81px;
@@ -50,45 +50,32 @@ body {
   cursor: url(https://ani.cursors-4u.net/toons/too-12/too1131.cur), auto;
 }
 
-.crt::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: repeating-linear-gradient(
-    rgba(255,255,255,0.05) 0px,
-    rgba(255,255,255,0.05) 1px,
-    transparent 2px,
-    transparent 8px
-  );
-  pointer-events: none;
-  z-index: 9999;
-}
 
 header {
   width: 100%;
-  background: linear-gradient(90deg, var(--penn-blue), var(--night-));
   background-image: url(/imagenes/textura1.png) ;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-position: center ;
+  background-size:cover;
   padding: var(--padding-2-);
   text-align: center;
-  color: var(--ghost-wine);
-  font-size: var(--h4);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+.hero{
+  position: relative;
 }
 .hero img {
   border-radius: 20px;
-  align-items: center;
   width: 80%;
-  border: 2px solid var(--columbia-blue);
+  border: 2px ridge var(--columbia-blue);
   box-shadow: 0 0 30px var(--night-);
   filter: blur(2.5px)
 }
+
 .hero h1{
   position: absolute;
-  left: 550px;
-  bottom: 520px;
+  right: 0px;
+  bottom: 0px;
   width: 900px;
   font-weight: bold;
   padding: var(--padding-1-);
@@ -102,43 +89,53 @@ header {
   grid-template-columns: 200px 1fr 200px;
   gap: var(--padding-2-);
   width: 90%;
-  max-width: 1200px;
+
 }
 .left-column ul li {
+  margin-bottom: var(--padding-1-);
   padding: var(--padding-0-);
   gap: var(--padding-1-);
-  border-radius: 4px;
-  margin-bottom: var(--padding-1-);
   font-size: var(--h6);
   font-weight: 700;
   text-align: center;
-  
-
+  width: 100%;
+  box-sizing: border-box;
 }
 
-ul li.subseccion {
+.subseccion {
   border: 2px ridge var(--columbia-blue);
   background-color: #10385724;             
   font-size: var(--p);  
+  border-radius: 4px;
   padding: var(--pading-0-); 
   font-weight: 400;
+  display: block;
   text-align: center;
   box-shadow: inset 13px 0px 6px -10px  var(--night-), inset -13px 0px 6px -10px var(--night-), inset 0px 13px 6px -10px var(--saboy-blue), inset 0px -13px 6px -10px var(--night-);
 
 } 
+.subseccion:hover {
+  color: var(--night-);
+  background-color: var(--columbia-blue);
+}
+a {
+  color: #AEC8DC;
+  text-decoration: none;
+}
 
 .left-column,.right-container {
   background: var(--night-);
   padding: var(--padding-1-);
   border: 2px ridge var(--saboy-blue);
   border-radius: 8px;
-  height:min-content;
+  height :min-content;
 }
 
 .holder {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
 }
 
 /* ===== Boxes ===== */
@@ -148,6 +145,7 @@ ul li.subseccion {
   border-radius: 8px;
   border: 2px solid #AEC8DC;
   background-image: url("/imagenes/background.png");
+
 }
 
 .box2 {
@@ -169,14 +167,8 @@ h2 {
   color: #F0F3FF;
 }
 
-a {
-  color: #AEC8DC;
-  text-decoration: none;
-}
 
-a:hover {
-  color: #F0F3FF;
-}
+
 .etiquetas img {
   transition: transform 0.2s ease; 
 }
@@ -185,8 +177,35 @@ a:hover {
 }
 
 .holder img {
-  transition: transform 0.2s ease; 
+  transition: transform 0.2s ease;
 }
 .holder img:hover {
   transform: scale(1.1);
 }
+
+.box2 .imagenes {
+  column-count: 2;       
+  column-gap: var(--gap-1-);     
+}
+
+.box2 .imagenes img {
+  max-width: 100%;      
+  height: auto;         
+  margin-bottom: 15px;
+  border-radius: 3px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.box2 .imagenes img:hover {
+  transform: scale(1.05);
+}
+.box2 .imagenes img.full-width {
+  column-span: all;  
+  height: auto;
+  display: block;
+  margin: 15px 0;
+}
+
+
+
