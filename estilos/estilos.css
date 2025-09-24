@@ -67,7 +67,7 @@ body {
 header {
   width: 100%;
   background: linear-gradient(90deg, var(--penn-blue), var(--night-));
-  background-image: url(/imagenes/Texturaheader.png) ;
+  background-image: url(/imagenes/textura1.png) ;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -132,6 +132,7 @@ ul li.subseccion {
   padding: var(--padding-1-);
   border: 2px ridge var(--saboy-blue);
   border-radius: 8px;
+  height:min-content;
 }
 
 .holder {
@@ -183,3 +184,9 @@ a:hover {
   transform: scale(1.1);
 }
 
+.holder img {
+  transition: transform 0.2s ease; 
+}
+.holder img:hover {
+  transform: scale(1.1);
+}
