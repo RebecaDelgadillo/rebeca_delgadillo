@@ -48,6 +48,7 @@ body {
   flex-direction: column;
   align-items: center;
   cursor: url(https://ani.cursors-4u.net/toons/too-12/too1131.cur), auto;
+  overflow-x: hidden
 }
 
 
@@ -59,11 +60,12 @@ header {
   background-size:cover;
   padding: var(--padding-2-);
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .hero{
   position: relative;
 }
+
 .hero img {
   border-radius: 20px;
   width: 80%;
@@ -74,8 +76,8 @@ header {
 
 .hero h1{
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  right: -40px;
+  bottom: -60px;
   width: 900px;
   font-weight: bold;
   padding: var(--padding-1-);
@@ -196,6 +198,24 @@ h2 {
   display: inline-block;
   transition: transform 0.2s ease;
 }
+/* Contenedor de imágenes estilo grid */
+.box2 .imagenesPeliculas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px; 
+}
+
+.box2 .imagenesPeliculas img {
+  width: 100%;   
+  height: auto;  
+  border-radius: 3px;
+  transition: transform 0.2s ease;
+}
+
+.box2 .imagenesPeliculas img:hover {
+  transform: scale(1.05);
+}
+
 
 .box2 .imagenes img:hover {
   transform: scale(1.05);
@@ -206,6 +226,78 @@ h2 {
   display: block;
   margin: 15px 0;
 }
+.centro {
+  text-align: center;
+}
+
+.ajustesImagenes {
+  border-radius: 3px;
+  transform: scale(1.05);
+  margin: var(--padding-1-);
+}
 
 
+.galeria-horizontal-full {
+  display: flex;
+  gap: 10px; 
+  width: 100%;
+}
 
+.galeria-horizontal-full img {
+  flex: 1;           
+  height: 200px;    
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* ===== Cuadros info ===== */
+.info-cuadros {
+  display: flex;
+  gap: var(--gap-1-);
+  margin-top: 20px;
+}
+
+.cuadro {
+  flex: 10;
+  border: 2px ridge var(--columbia-blue);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+iframe {
+  border: none;
+  height: 600px;
+  width:100%;
+}
+
+.audio-player {
+  color: var(--ghost-wine);
+  font-family: var(--Doto);
+  background-color: var(--night-);     
+  border: none;
+  padding: var(--padding-1-);
+  width: fit-content;
+  margin: 20px auto;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.audio-player:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.audio-player p {
+  margin-bottom: 10px;
+  font-size: var(--p);
+  font-weight: 500;
+}
+
+.audio-player audio {
+  width: 100%;
+  outline: none;
+}
