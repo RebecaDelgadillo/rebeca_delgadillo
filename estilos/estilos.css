@@ -31,6 +31,8 @@
     /* Separaciones de lina*/
     --interlineado-1-:1.5;
 }
+
+
 /* ===== Reset básico ===== */
 * {
   list-style: none;
@@ -147,7 +149,6 @@ a {
   border-radius: 8px;
   border: 2px solid #AEC8DC;
   background-image: url("/imagenes/background.png");
-
 }
 
 .box2 {
@@ -155,24 +156,14 @@ a {
   border-radius: 6px;
   margin-bottom: 10px;
 }
-.box2 p img {
-  transition: transform 0.2s ease;
+.etiquetas{
+  display: flex; 
 }
-.box2 p img:hover{
-  transform: scale(1.2);
-}
-
-
-h2 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  color: #F0F3FF;
-}
-
-
-
 .etiquetas img {
-  transition: transform 0.2s ease; 
+  flex: 1;           
+  height: 18px;    
+  object-fit:contain;
+  transition: transform 0.2s ease;
 }
 .etiquetas img:hover {
   transform: scale(1.1);
@@ -184,12 +175,11 @@ h2 {
 .holder img:hover {
   transform: scale(1.1);
 }
-
+/*Imagenes mi_arte*/
 .box2 .imagenes {
   column-count: 2;       
   column-gap: var(--gap-1-);     
 }
-
 .box2 .imagenes img {
   max-width: 100%;      
   height: auto;         
@@ -198,26 +188,20 @@ h2 {
   display: inline-block;
   transition: transform 0.2s ease;
 }
-/* Contenedor de imágenes estilo grid */
+/*imagenes peliculas*/
 .box2 .imagenesPeliculas {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 15px; 
 }
-
 .box2 .imagenesPeliculas img {
   width: 100%;   
   height: auto;  
   border-radius: 3px;
   transition: transform 0.2s ease;
 }
-
 .box2 .imagenesPeliculas img:hover {
-  transform: scale(1.05);
-}
-
-
-.box2 .imagenes img:hover {
   transform: scale(1.05);
 }
 .box2 .imagenes img.full-width {
@@ -226,16 +210,29 @@ h2 {
   display: block;
   margin: 15px 0;
 }
-.centro {
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100%;
+  background-color: var(--penn-blue);
+  color: var(--ghost-wine);
   text-align: center;
-}
-
-.ajustesImagenes {
+  padding: var(--padding-1-);
   border-radius: 3px;
-  transform: scale(1.05);
-  margin: var(--padding-1-);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: var(--h6);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
+
+/*galeria mis pasiones*/
 
 .galeria-horizontal-full {
   display: flex;
@@ -248,11 +245,24 @@ h2 {
   height: 200px;    
   object-fit: cover;
   border-radius: 6px;
-  cursor: pointer;
   transition: transform 0.2s ease;
 }
 
-/* ===== Cuadros info ===== */
+
+.disposicion_Gifs{
+  display: flex;
+  gap: 10px; 
+  width: 100%;
+}
+.disposicion_Gifs img{
+  flex: 1;           
+  height: 50px;    
+  object-fit:contain;
+  transition: transform 0.2s ease;
+}
+
+
+/* info de la pagina */
 .info-cuadros {
   display: flex;
   gap: var(--gap-1-);
@@ -267,13 +277,12 @@ h2 {
   text-align: center;
 }
 
-
 iframe {
   border: none;
   height: 600px;
   width:100%;
 }
-
+/* Solo audio player*/
 .audio-player {
   color: var(--ghost-wine);
   font-family: var(--Doto);
@@ -301,3 +310,30 @@ iframe {
   width: 100%;
   outline: none;
 }
+
+
+/*configuraciones con etiquetas* clase 24 sep*/
+.centro {
+  text-align: center;
+}
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #F0F3FF;
+}
+.ajustesImagenes {
+  border-radius: 3px;
+  transform: scale(1.05);
+  margin: var(--padding-1-);
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  overflow: hidden;
+
+}
+
+
