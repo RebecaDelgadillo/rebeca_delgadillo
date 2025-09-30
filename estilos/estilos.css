@@ -336,4 +336,36 @@ h2 {
 
 }
 
+.right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* espacio entre cajas */
+}
 
+.box {
+  background-color: var(--night-); /* tu color de fondo */
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.youtuber {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px; 
+    gap: var(--gap-1-); 
+}
+
+.youtuber img.ajustesImagenes {
+    width: 200px;
+    border-radius: 8px;
+    flex-shrink: 0; 
+}
+
+
+.youtuber p {
+    margin: 0;
+}
